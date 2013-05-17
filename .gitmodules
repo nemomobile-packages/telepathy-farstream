@@ -1,0 +1,3 @@
+[submodule "telepathy-farstream"]
+	path = telepathy-farstream
+	url = http://anongit.freedesktop.org/git/telepathy/telepathy-farstream.git
