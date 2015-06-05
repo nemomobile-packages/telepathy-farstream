@@ -9,9 +9,10 @@ Source0:        http://telepathy.freedesktop.org/releases/telepathy-farstream/%{
 Patch0:         disable-gtkdoc.patch
 BuildRequires:  python
 BuildRequires:  pkgconfig(telepathy-glib)
-BuildRequires:  pkgconfig(farstream-0.1)
+BuildRequires:  pkgconfig(farstream-0.2)
 BuildRequires:  pkgconfig(dbus-1)
 BuildRequires:  pkgconfig(dbus-glib-1)
+BuildRequires:  pkgconfig(gobject-introspection-1.0)
 
 Obsoletes: telepathy-farsight
 
@@ -34,7 +35,7 @@ Telepathy client libraries for video conferencing applications
 %patch0 -p1
 
 %build
-%autogen --disable-python --enable-static=no --disable-gtk-doc
+%autogen --disable-python --enable-static=no --disable-gtk-doc --disable-introspection
 make %{?_smp_mflags}
 
 %install
